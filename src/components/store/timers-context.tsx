@@ -111,5 +111,9 @@ const [timersState, dispatch] = useReducer(timersReducer, initialState);
         },
     };
 
-return (<TimersContext.Provider value={ctx}>{children}</TimersContext.Provider>
+// -8- PROVIDING THE CONTEXT
+return (
+    <TimersContext.Provider value={ctx}>
+        {children}
+    </TimersContext.Provider>
 )};
