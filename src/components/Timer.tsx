@@ -5,7 +5,9 @@ import { type Timer as TimerProps } from '../components/store/timers-context.tsx
 
 
 export default function Timer({name, duration}: TimerProps) {
-  const interval = useRef<number | null>(null);
+  const interval = useRef< number | null >(null);
+  console.log(interval);
+  
   const [remainingTime, setRemainingTime] = useState(duration * 1000);
   
   if(remainingTime <= 0 && interval.current) {
